@@ -278,9 +278,34 @@
 
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+.about-main {
+  padding-right: 2rem;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.about-tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-size: 1rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 2rem;
 }
 
 .about-text p {
@@ -290,37 +315,42 @@
   margin-bottom: 1.5rem;
 }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.about-qualities {
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
-.stat-card {
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  padding: 2rem;
+.quality-card {
+  background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+  padding: 1.5rem;
   border-radius: 15px;
-  text-align: center;
-  transition: transform 0.3s;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
+.quality-card:hover {
+  transform: translateX(10px);
+  border-color: var(--primary);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
 }
 
-.stat-card h3 {
+.quality-icon {
   font-size: 2.5rem;
-  font-weight: 700;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 0.5rem;
 }
 
-.stat-card p {
+.quality-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.quality-card p {
   color: var(--gray);
-  font-weight: 600;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Skills Section */
@@ -367,6 +397,13 @@
   font-weight: 600;
   color: var(--primary);
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-tag i {
+  font-size: 1.2rem;
 }
 
 .skill-tag:hover {
@@ -525,23 +562,51 @@
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
 .achievement-card {
   background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
-  padding: 2rem;
   border-radius: 20px;
-  text-align: center;
+  overflow: hidden;
   transition: all 0.3s;
   border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .achievement-card:hover {
   transform: translateY(-10px);
   border-color: var(--primary);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.achievement-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.achievement-card:hover .achievement-image img {
+  transform: scale(1.05);
+}
+
+.achievement-content {
+  padding: 2rem;
+  text-align: center;
 }
 
 .achievement-icon {

@@ -96,38 +96,39 @@ function App() {
       {/* About Section */}
       <section id="about" className="section about-section">
         <div className="container">
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">Get to know me</h2>
           <div className="about-content">
-            <div className="about-text">
-              <p>
-                I am Siddhi Pisal, a passionate Information Technology student at <strong>Usha Mittal Institute of Technology, Mumbai</strong>, with a strong academic foundation and a diploma in IT with 89.50%. I have hands-on experience in Android development, web technologies, and database management.
-              </p>
-              <p>
-                As an <strong>Android App Development Intern at Maxgen Technologies</strong>, I worked on building real-time applications using Java, XML, and Firebase. I am skilled in Java, Python, C/C++, JavaScript, MySQL, and REST APIs, with a strong understanding of OOP and Agile practices.
-              </p>
-              <p>
-                I enjoy building impactful tech solutions, such as <strong>HackMates</strong>—an AI-powered hackathon community platform that secured <strong>First Runner-Up among 127 teams</strong>.
-              </p>
-              <p>
-                I am particularly interested in AI, full-stack development, and creating user-friendly digital experiences. With strong teamwork, problem-solving abilities, and a continuous learning mindset, I aim to contribute to innovative and scalable technology solutions.
-              </p>
+            <div className="about-main">
+              <h3 className="about-heading">About Me</h3>
+              <p className="about-tagline">A passionate student on a journey to become a skilled developer</p>
+              <p className="about-subtitle">Learning, building, and growing every day</p>
+              <div className="about-text">
+                <p>
+                  I'm an Information Technology student passionate about Android development, web development, and software engineering. My journey started with curiosity about how applications work, and has grown into a love for creating digital solutions through code.
+                </p>
+                <p>
+                  Currently pursuing my B.Tech at Usha Mittal Institute of Technology, Mumbai, while building projects with modern technologies like React, Java, Python, and Firebase. I enjoy the challenge of turning ideas into functional applications and learning new frameworks along the way.
+                </p>
+                <p>
+                  When I'm not studying or coding, I'm exploring the latest tech trends, participating in hackathons, and working on personal projects that help me grow as a developer. I secured First Runner-Up among 127 teams at TechSprint 2026 with my AI-powered hackathon platform, HackMates.
+                </p>
+              </div>
             </div>
-            <div className="about-stats">
-              <div className="stat-card">
-                <h3>8.07</h3>
-                <p>CGPA</p>
+            <div className="about-qualities">
+              <div className="quality-card">
+                <div className="quality-icon">🚀</div>
+                <h4>Eager Learner</h4>
+                <p>Constantly learning new technologies and best practices through coursework and projects</p>
               </div>
-              <div className="stat-card">
-                <h3>89.50%</h3>
-                <p>Diploma</p>
+              <div className="quality-card">
+                <div className="quality-icon">🤝</div>
+                <h4>Team Player</h4>
+                <p>Collaborative approach to group projects and hackathons</p>
               </div>
-              <div className="stat-card">
-                <h3>3+</h3>
-                <p>Projects</p>
-              </div>
-              <div className="stat-card">
-                <h3>1st</h3>
-                <p>Runner-Up</p>
+              <div className="quality-card">
+                <div className="quality-icon">💡</div>
+                <h4>Problem Solver</h4>
+                <p>Love tackling coding challenges and finding creative solutions</p>
               </div>
             </div>
           </div>
@@ -142,49 +143,62 @@ function App() {
             <div className="skill-category">
               <h3 className="category-title">Programming</h3>
               <div className="skill-items">
-                {['Python', 'Java', 'JavaScript', 'C++', 'C'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag"><i className="devicon-python-plain colored"></i> Python</div>
+                <div className="skill-tag"><i className="devicon-java-plain colored"></i> Java</div>
+                <div className="skill-tag"><i className="devicon-javascript-plain colored"></i> JavaScript</div>
+                <div className="skill-tag"><i className="devicon-cplusplus-plain colored"></i> C++</div>
+                <div className="skill-tag"><i className="devicon-c-plain colored"></i> C</div>
               </div>
             </div>
             <div className="skill-category">
               <h3 className="category-title">Frontend</h3>
               <div className="skill-items">
-                {['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag"><i className="devicon-react-original colored"></i> React</div>
+                <div className="skill-tag"><i className="devicon-nextjs-plain"></i> Next.js</div>
+                <div className="skill-tag"><i className="devicon-typescript-plain colored"></i> TypeScript</div>
+                <div className="skill-tag"><i className="devicon-javascript-plain colored"></i> JavaScript</div>
+                <div className="skill-tag"><i className="devicon-tailwindcss-plain colored"></i> Tailwind CSS</div>
+                <div className="skill-tag"><i className="devicon-html5-plain colored"></i> HTML5</div>
+                <div className="skill-tag"><i className="devicon-css3-plain colored"></i> CSS3</div>
               </div>
             </div>
             <div className="skill-category">
               <h3 className="category-title">Backend</h3>
               <div className="skill-items">
-                {['Python', 'FastAPI', 'Flask', 'PHP'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag"><i className="devicon-python-plain colored"></i> Python</div>
+                <div className="skill-tag"><i className="devicon-fastapi-plain colored"></i> FastAPI</div>
+                <div className="skill-tag"><i className="devicon-flask-original"></i> Flask</div>
+                <div className="skill-tag"><i className="devicon-php-plain colored"></i> PHP</div>
               </div>
             </div>
             <div className="skill-category">
               <h3 className="category-title">Databases</h3>
               <div className="skill-items">
-                {['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'Firebase'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag"><i className="devicon-mysql-plain colored"></i> MySQL</div>
+                <div className="skill-tag"><i className="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+                <div className="skill-tag"><i className="devicon-mongodb-plain colored"></i> MongoDB</div>
+                <div className="skill-tag"><i className="devicon-oracle-original colored"></i> Oracle</div>
+                <div className="skill-tag"><i className="devicon-firebase-plain colored"></i> Firebase</div>
               </div>
             </div>
             <div className="skill-category">
               <h3 className="category-title">DevOps & Cloud</h3>
               <div className="skill-items">
-                {['Docker', 'Kubernetes', 'Linux', 'Git', 'GitHub Actions'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag"><i className="devicon-docker-plain colored"></i> Docker</div>
+                <div className="skill-tag"><i className="devicon-kubernetes-plain colored"></i> Kubernetes</div>
+                <div className="skill-tag"><i className="devicon-linux-plain"></i> Linux</div>
+                <div className="skill-tag"><i className="devicon-git-plain colored"></i> Git</div>
+                <div className="skill-tag"><i className="devicon-github-original"></i> GitHub Actions</div>
               </div>
             </div>
             <div className="skill-category">
               <h3 className="category-title">Concepts & Tools</h3>
               <div className="skill-items">
-                {['REST APIs', 'OOP', 'UI/UX Design', 'Agile', 'Android Studio'].map((skill) => (
-                  <div key={skill} className="skill-tag">{skill}</div>
-                ))}
+                <div className="skill-tag">🔌 REST APIs</div>
+                <div className="skill-tag">📦 OOP</div>
+                <div className="skill-tag">🎨 UI/UX Design</div>
+                <div className="skill-tag">⚡ Agile</div>
+                <div className="skill-tag"><i className="devicon-androidstudio-plain colored"></i> Android Studio</div>
               </div>
             </div>
           </div>
@@ -278,40 +292,92 @@ function App() {
           <h2 className="section-title">Achievements & Certifications</h2>
           <div className="achievements-grid">
             <div className="achievement-card">
-              <div className="achievement-icon">🥈</div>
-              <h3>First Runner-Up</h3>
-              <p>TechSprint 2026 Hackathon</p>
-              <span className="achievement-detail">Top 3 among 127 teams</span>
+              <div className="achievement-image">
+                <img src="/certificates/techsprint-runner-up.jpg.jpeg" alt="TechSprint 2026 First Runner-Up" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">🥈</div>
+                <h3>First Runner-Up</h3>
+                <p>TechSprint 2026 Hackathon</p>
+                <span className="achievement-detail">Top 3 among 127 teams</span>
+              </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-icon">🏅</div>
-              <h3>Runner-Up</h3>
-              <p>Technical Paper Presentation</p>
-              <span className="achievement-detail">State Level, Feb 2024</span>
+              <div className="achievement-image">
+                <img src="/certificates/paper-presentation.jpg.jpeg" alt="Technical Paper Presentation Runner-Up" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">🏅</div>
+                <h3>Runner-Up</h3>
+                <p>Technical Paper Presentation</p>
+                <span className="achievement-detail">State Level, Feb 2024</span>
+              </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-icon">🎯</div>
-              <h3>Participant</h3>
-              <p>WebVenture 2025</p>
-              <span className="achievement-detail">National Level</span>
+              <div className="achievement-image">
+                <img src="/certificates/webventure.jpg.jpeg" alt="WebVenture 2025 Participant" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">🎯</div>
+                <h3>Participant</h3>
+                <p>WebVenture 2025</p>
+                <span className="achievement-detail">National Level</span>
+              </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-icon">📜</div>
-              <h3>Generative AI Fundamentals</h3>
-              <p>Google Cloud</p>
-              <span className="achievement-detail">July 2025</span>
+              <div className="achievement-image">
+                <img src="/certificates/hackwithindia.jpeg" alt="Hack With India Certificate" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">💻</div>
+                <h3>Hack With India</h3>
+                <p>Hackathon Participation</p>
+                <span className="achievement-detail">2025</span>
+              </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-icon">💻</div>
-              <h3>AI Development Bootcamp</h3>
-              <p>Udemy - 7 Days Hands-On</p>
-              <span className="achievement-detail">July 2025</span>
+              <div className="achievement-image">
+                <img src="/certificates/google-ai.jpg .jpeg" alt="Generative AI Fundamentals Certificate" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">📜</div>
+                <h3>Generative AI Fundamentals</h3>
+                <p>Google Cloud</p>
+                <span className="achievement-detail">July 2025</span>
+              </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-icon">🎖️</div>
-              <h3>Certificate of Excellence</h3>
-              <p>TechSprint 2026 Hackathon</p>
-              <span className="achievement-detail">2026</span>
+              <div className="achievement-image">
+                <img src="/certificates/ai-bootcamp.jpg.jpeg" alt="AI Development Bootcamp Certificate" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">🤖</div>
+                <h3>AI Development Bootcamp</h3>
+                <p>Udemy - 7 Days Hands-On</p>
+                <span className="achievement-detail">July 2025</span>
+              </div>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-image">
+                <img src="/certificates/AWS.jpeg" alt="AWS Certificate" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">☁️</div>
+                <h3>AWS Certification</h3>
+                <p>Amazon Web Services</p>
+                <span className="achievement-detail">Cloud Computing</span>
+              </div>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-image">
+                <img src="/certificates/infosysfullstack.jpeg" alt="Infosys Full Stack Certificate" />
+              </div>
+              <div className="achievement-content">
+                <div className="achievement-icon">🎓</div>
+                <h3>Full Stack Development</h3>
+                <p>Infosys Springboard</p>
+                <span className="achievement-detail">Web Development</span>
+              </div>
             </div>
           </div>
         </div>
