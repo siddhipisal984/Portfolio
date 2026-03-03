@@ -67,9 +67,9 @@ function App() {
               <button className="btn btn-primary" onClick={() => scrollToSection('projects')}>
                 View My Work
               </button>
-              <a href="/resume/SIDDHI_RESUME.pdf" download className="btn btn-resume">
+              <a href="/resume/SIDDHI_RESUME.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-resume">
                 <span className="btn-icon">📄</span>
-                Download Resume
+                Preview Resume
               </a>
               <button className="btn btn-contact" onClick={() => scrollToSection('contact')}>
                 <span className="btn-icon">💬</span>
@@ -396,9 +396,9 @@ function App() {
             <div className="contact-info">
               <h3>Let's Connect!</h3>
               <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-              <a href="/resume/SIDDHI_RESUME.pdf" download className="btn btn-resume-large">
+              <a href="/resume/SIDDHI_RESUME.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-resume-large">
                 <span className="btn-icon">📄</span>
-                Download My Resume
+                Preview My Resume
               </a>
               <div className="contact-items">
                 <div className="contact-item">
