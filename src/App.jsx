@@ -6,6 +6,13 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+  const [typedText, setTypedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const roles = ['Information Technology Student', 'Aspiring Android Developer', 'Full Stack Developer', 'Problem Solver'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +22,44 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleTyping = () => {
+      const i = loopNum % roles.length;
+      const fullText = roles[i];
+
+      setTypedText(
+        isDeleting
+          ? fullText.substring(0, typedText.length - 1)
+          : fullText.substring(0, typedText.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 50 : 150);
+
+      if (!isDeleting && typedText === fullText) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && typedText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [typedText, isDeleting, loopNum, typingSpeed, roles]);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setActiveSection(sectionId);
     setIsMenuOpen(false);
+  };
+
+  const openModal = (imageSrc, altText) => {
+    setModalImage({ src: imageSrc, alt: altText });
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
   };
 
   return (
@@ -59,7 +99,10 @@ function App() {
             <h1 className="hero-title">
               Hi, I'm <span className="gradient-text">Siddhi Pisal</span>
             </h1>
-            <p className="hero-subtitle">Information Technology Student & <span className="gradient-text">Aspiring Android Developer</span></p>
+            <p className="hero-subtitle">
+              <span className="typing-text">{typedText}</span>
+              <span className="cursor">|</span>
+            </p>
             <p className="hero-description">
               Passionate about building innovative tech solutions with AI, Full-Stack Development, and Mobile Apps
             </p>
@@ -297,7 +340,7 @@ function App() {
           <h2 className="section-title">Achievements & Certifications</h2>
           <div className="achievements-grid">
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/techsprint-runner-up.jpg.jpeg', 'TechSprint 2026 First Runner-Up')}>
                 <img src="/certificates/techsprint-runner-up.jpg.jpeg" alt="TechSprint 2026 First Runner-Up" />
               </div>
               <div className="achievement-content">
@@ -308,7 +351,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/paper-presentation.jpg.jpeg', 'Technical Paper Presentation Runner-Up')}>
                 <img src="/certificates/paper-presentation.jpg.jpeg" alt="Technical Paper Presentation Runner-Up" />
               </div>
               <div className="achievement-content">
@@ -319,7 +362,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/webventure.jpg.jpeg', 'WebVenture 2025 Participant')}>
                 <img src="/certificates/webventure.jpg.jpeg" alt="WebVenture 2025 Participant" />
               </div>
               <div className="achievement-content">
@@ -330,7 +373,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/hackwithindia.jpeg', 'Hack With India Certificate')}>
                 <img src="/certificates/hackwithindia.jpeg" alt="Hack With India Certificate" />
               </div>
               <div className="achievement-content">
@@ -341,7 +384,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/google-ai.jpg .jpeg', 'Generative AI Fundamentals Certificate')}>
                 <img src="/certificates/google-ai.jpg .jpeg" alt="Generative AI Fundamentals Certificate" />
               </div>
               <div className="achievement-content">
@@ -352,7 +395,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/ai-bootcamp.jpg.jpeg', 'AI Development Bootcamp Certificate')}>
                 <img src="/certificates/ai-bootcamp.jpg.jpeg" alt="AI Development Bootcamp Certificate" />
               </div>
               <div className="achievement-content">
@@ -363,7 +406,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/AWS.jpeg', 'AWS Certificate')}>
                 <img src="/certificates/AWS.jpeg" alt="AWS Certificate" />
               </div>
               <div className="achievement-content">
@@ -374,7 +417,7 @@ function App() {
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image">
+              <div className="achievement-image" onClick={() => openModal('/certificates/infosysfullstack.jpeg', 'Infosys Full Stack Certificate')}>
                 <img src="/certificates/infosysfullstack.jpeg" alt="Infosys Full Stack Certificate" />
               </div>
               <div className="achievement-content">
@@ -454,6 +497,16 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Image Modal */}
+      {modalImage && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>&times;</button>
+            <img src={modalImage.src} alt={modalImage.alt} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
