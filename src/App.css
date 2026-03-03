@@ -810,19 +810,20 @@ body {
 }
 
 .achievement-card {
-  background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+  background: white;
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s;
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .achievement-card:hover {
   transform: translateY(-10px);
   border-color: var(--primary);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
 .achievement-image {
@@ -869,32 +870,28 @@ body {
   transform: scale(1.05);
 }
 
-.achievement-content {
-  padding: 2rem;
+.achievement-caption {
+  padding: 1.5rem;
   text-align: center;
+  background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+  transition: all 0.3s;
 }
 
-.achievement-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.achievement-card:hover .achievement-caption {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
 }
 
-.achievement-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: var(--dark);
-}
-
-.achievement-card p {
-  color: var(--primary);
+.achievement-caption h3 {
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: var(--dark);
+  margin: 0;
+  transition: all 0.3s;
 }
 
-.achievement-detail {
-  display: block;
-  color: var(--gray);
-  font-size: 0.9rem;
+.achievement-card:hover .achievement-caption h3 {
+  color: var(--primary);
+  transform: scale(1.05);
 }
 
 /* Contact Section */
@@ -1234,8 +1231,12 @@ body {
     height: 200px;
   }
 
-  .achievement-content {
-    padding: 1.5rem;
+  .achievement-caption {
+    padding: 1rem;
+  }
+
+  .achievement-caption h3 {
+    font-size: 1rem;
   }
 
   .contact-content {
@@ -1292,6 +1293,10 @@ body {
 
   .achievement-image {
     height: 180px;
+  }
+
+  .achievement-caption h3 {
+    font-size: 0.9rem;
   }
 }
 

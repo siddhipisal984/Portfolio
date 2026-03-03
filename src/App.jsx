@@ -340,91 +340,67 @@ function App() {
           <h2 className="section-title">Achievements & Certifications</h2>
           <div className="achievements-grid">
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/techsprint-runner-up.jpg.jpeg', 'TechSprint 2026 First Runner-Up')}>
-                <img src="/certificates/techsprint-runner-up.jpg.jpeg" alt="TechSprint 2026 First Runner-Up" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/techsprint-runner-up.jpg.jpeg', 'TechSprint 2026 Hackathon')}>
+                <img src="/certificates/techsprint-runner-up.jpg.jpeg" alt="TechSprint 2026 Hackathon" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">🥈</div>
-                <h3>First Runner-Up</h3>
-                <p>TechSprint 2026 Hackathon</p>
-                <span className="achievement-detail">Top 3 among 127 teams</span>
+              <div className="achievement-caption">
+                <h3>TechSprint 2026 Hackathon</h3>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/paper-presentation.jpg.jpeg', 'Technical Paper Presentation Runner-Up')}>
-                <img src="/certificates/paper-presentation.jpg.jpeg" alt="Technical Paper Presentation Runner-Up" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/paper-presentation.jpg.jpeg', 'Technical Paper Presentation')}>
+                <img src="/certificates/paper-presentation.jpg.jpeg" alt="Technical Paper Presentation" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">🏅</div>
-                <h3>Runner-Up</h3>
-                <p>Technical Paper Presentation</p>
-                <span className="achievement-detail">State Level, Feb 2024</span>
+              <div className="achievement-caption">
+                <h3>Technical Paper Presentation</h3>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/webventure.jpg.jpeg', 'WebVenture 2025 Participant')}>
-                <img src="/certificates/webventure.jpg.jpeg" alt="WebVenture 2025 Participant" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/webventure.jpg.jpeg', 'WebVenture 2025')}>
+                <img src="/certificates/webventure.jpg.jpeg" alt="WebVenture 2025" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">🎯</div>
-                <h3>Participant</h3>
-                <p>WebVenture 2025</p>
-                <span className="achievement-detail">National Level</span>
+              <div className="achievement-caption">
+                <h3>WebVenture 2025</h3>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/hackwithindia.jpeg', 'Hack With India Certificate')}>
-                <img src="/certificates/hackwithindia.jpeg" alt="Hack With India Certificate" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/hackwithindia.jpeg', 'Hack With India')}>
+                <img src="/certificates/hackwithindia.jpeg" alt="Hack With India" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">💻</div>
+              <div className="achievement-caption">
                 <h3>Hack With India</h3>
-                <p>Hackathon Participation</p>
-                <span className="achievement-detail">2025</span>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/google-ai.jpg .jpeg', 'Generative AI Fundamentals Certificate')}>
-                <img src="/certificates/google-ai.jpg .jpeg" alt="Generative AI Fundamentals Certificate" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/google-ai.jpg .jpeg', 'Generative AI Fundamentals')}>
+                <img src="/certificates/google-ai.jpg .jpeg" alt="Generative AI Fundamentals" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">📜</div>
+              <div className="achievement-caption">
                 <h3>Generative AI Fundamentals</h3>
-                <p>Google Cloud</p>
-                <span className="achievement-detail">July 2025</span>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/ai-bootcamp.jpg.jpeg', 'AI Development Bootcamp Certificate')}>
-                <img src="/certificates/ai-bootcamp.jpg.jpeg" alt="AI Development Bootcamp Certificate" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/ai-bootcamp.jpg.jpeg', 'AI Development Bootcamp')}>
+                <img src="/certificates/ai-bootcamp.jpg.jpeg" alt="AI Development Bootcamp" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">🤖</div>
+              <div className="achievement-caption">
                 <h3>AI Development Bootcamp</h3>
-                <p>Udemy - 7 Days Hands-On</p>
-                <span className="achievement-detail">July 2025</span>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/AWS.jpeg', 'AWS Certificate')}>
-                <img src="/certificates/AWS.jpeg" alt="AWS Certificate" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/AWS.jpeg', 'AWS Online Workshop')}>
+                <img src="/certificates/AWS.jpeg" alt="AWS Online Workshop" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">☁️</div>
-                <h3>AWS Certification</h3>
-                <p>Amazon Web Services</p>
-                <span className="achievement-detail">Cloud Computing</span>
+              <div className="achievement-caption">
+                <h3>AWS Online Workshop</h3>
               </div>
             </div>
             <div className="achievement-card">
-              <div className="achievement-image" onClick={() => openModal('/certificates/infosysfullstack.jpeg', 'Infosys Full Stack Certificate')}>
-                <img src="/certificates/infosysfullstack.jpeg" alt="Infosys Full Stack Certificate" />
+              <div className="achievement-image" onClick={() => openModal('/certificates/infosysfullstack.jpeg', 'Full Stack Development')}>
+                <img src="/certificates/infosysfullstack.jpeg" alt="Full Stack Development" />
               </div>
-              <div className="achievement-content">
-                <div className="achievement-icon">🎓</div>
+              <div className="achievement-caption">
                 <h3>Full Stack Development</h3>
-                <p>Infosys Springboard</p>
-                <span className="achievement-detail">Web Development</span>
               </div>
             </div>
           </div>
