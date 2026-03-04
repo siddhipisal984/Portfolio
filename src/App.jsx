@@ -12,7 +12,7 @@ function App() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = ['Information Technology Student', 'Aspiring Android Developer', 'Full Stack Developer', 'Problem Solver'];
+  const roles = ['Information Technology Student', 'Aspiring Android Developer', 'Problem Solver', 'Technology Learner', 'Aspiring Tech Professional'];
 
   useEffect(() => {
     const handleScroll = () => {
